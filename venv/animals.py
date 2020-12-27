@@ -64,7 +64,7 @@ class Dog(Pets):
     def prise(self):
         print(f'{self.nickname} is good boy!')
 
-0
+
 if __name__ == "__main__":
     lion = Wild('Mammals', 'Africa', 'predator', 8)
     dog = Dog('Mammals', 'home', 'Kos', 1)
