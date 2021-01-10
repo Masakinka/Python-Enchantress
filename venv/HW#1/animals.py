@@ -14,7 +14,7 @@ class Animal:
         print(f'My habitat is" {self.habitat}.')
 
 
-class Wild(Animals):
+class Wild(Animal):
     def __init__(self, class_name, habitat, nutrition, height):
         super().__init__(class_name, habitat)
         self.nutrition = nutrition
@@ -27,7 +27,7 @@ class Wild(Animals):
             print("Big")
 
 
-class Pets(Animals):
+class Pet(Animal):
     def __init__(self, class_name, habitat, nickname, age):
         super().__init__(class_name, habitat)
         self.nickname = nickname
@@ -40,13 +40,13 @@ class Pets(Animals):
         print("Age:" + self.age)
 
 
-class Elephant(Wild, Pets):
+class Elephant(Wild, Pet):
     def __init__(self, class_name, habitat, nutrition, height, nickname, age):
         super().__init__(self, class_name, habitat, nutrition, height, nickname, age)
         pass
 
 
-class Cat(Pets):
+class Cat(Pet):
     def __init__(self, class_name, habitat, nickname, age):
         super().__init__(class_name, habitat, nickname, age)
 
@@ -54,7 +54,7 @@ class Cat(Pets):
         print("Says: Mew!")
 
 
-class Dog(Pets):
+class Dog(Pet):
     def __init__(self, class_name, habitat, nickname, age):
         super().__init__(class_name, habitat, nickname, age)
 
