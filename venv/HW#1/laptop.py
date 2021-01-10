@@ -18,8 +18,8 @@ class Laptop:
         self.diagonal = Screen(x, y)
 
     def get_specifications(self):
-        return "%s made by %s" % (self.model, self.maker) + " with diagonal " + str(self.diagonal.get_diagonal())
-
+        # return "%s made by %s" % (self.model, self.maker) + " with diagonal " + str(self.diagonal.get_diagonal())
+        return f"{self.model} made by {self.maker} with diagonal {self.diagonal.get_diagonal()}"
 
 if __name__ == "__main__":
     my_laptop = Laptop("Lenovo", "B460", 23, 31)

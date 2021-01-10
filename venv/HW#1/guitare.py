@@ -25,4 +25,3 @@ if __name__ == "__main__":
     count = StringQuantity(6)
     Yamaha = Guitare("Yamaha", "F 310", count)
     Yamaha.print_message()
-
