@@ -6,7 +6,7 @@ import datetime
 import random
 
 
-# class of Human
+# classes of Human
 class Human(ABC):
 
     @abstractmethod
@@ -83,6 +83,7 @@ class Person(Human):
             print(f' {self.name}, you used {discount}%. New prise is {amount}$')
         else:
             print(f'Sorry, {self.name}, you have enough money to buy this house')
+
 
 
 if __name__ == "__main__":
