@@ -12,17 +12,23 @@ class TestHenHouse(unittest.TestCase):
         with self.assertRaises(ValueError) as error:
             self.henhouse = HenHouse(4)
 
-    def test_season(self):
+    def test_season_spring(self):
         with patch('tests.hen_house.hen_class.datetime.datetime') as moc:
             moc.today().month = 3
             self.assertEqual(self.henhouse.season, 'spring')
 
+    def test_season_winter(self):
+        with patch('tests.hen_house.hen_class.datetime.datetime') as moc:
             moc.today().month = 1
             self.assertEqual(self.henhouse.season, 'winter')
 
+    def test_season_summer(self):
+        with patch('tests.hen_house.hen_class.datetime.datetime') as moc:
             moc.today().month = 6
             self.assertEqual(self.henhouse.season, 'summer')
 
+    def test_season_autumn(self):
+        with patch('tests.hen_house.hen_class.datetime.datetime') as moc:
             moc.today().month = 11
             self.assertEqual(self.henhouse.season, 'autumn')
 
