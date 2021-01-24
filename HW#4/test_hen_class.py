@@ -57,7 +57,6 @@ class TestHenHouse(unittest.TestCase):
         with patch('tests.hen_house.hen_class.requests.get') as mock:
             mock.return_value.status_code = 200
             self.assertTrue(self.henhouse.food_price(), int)
-        pass
 
     def test_food_price_connection_error(self):
         with patch('tests.hen_house.hen_class.requests.get') as mock:
