@@ -1,0 +1,3 @@
+    environment:
+      SET_CONTAINER_TIMEZONE=true
+      CONTAINER_TIMEZONE=Europe/Rome
